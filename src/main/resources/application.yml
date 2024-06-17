@@ -3,14 +3,14 @@ spring:
     gateway:
       routes:
         - id: medilabo_patient
-          uri: http://localhost:8081
+          uri: http://medilabo-patient:8081
           predicates:
             - Path=/patients/**
         - id: medilabo_notes
-          uri: http://localhost:8083
+          uri: http://medilabo-notes:8083
           predicates:
             - Path=/notes/**
         - id: medilabo_risk
-          uri: http://localhost:8084
+          uri: http://medilabo-risk:8084
           predicates:
             - Path=/risk/**
